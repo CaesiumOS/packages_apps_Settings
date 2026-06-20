@@ -80,7 +80,7 @@ class CaesiumVersionDetailPreference :
     }
 
     // return true swallows the click event, while return false will start the intent
-//    override fun onPreferenceClick(preference: Preference): Boolean {
+    override fun onPreferenceClick(preference: Preference): Boolean {
 //        if (Utils.isMonkeyRunning()) return true
 //
 //        // remove oldest hit and check whether there are 3 clicks within 500ms
@@ -109,8 +109,8 @@ class CaesiumVersionDetailPreference :
 //        if (!disallowedBySystem) {
 //            RestrictedLockUtils.sendShowAdminSupportDetailsIntent(context, enforcedAdmin)
 //        }
-//        return true
-//    }
+        return true
+    }
 
     override val sensitivityLevel
         get() = SensitivityLevel.NO_SENSITIVITY
