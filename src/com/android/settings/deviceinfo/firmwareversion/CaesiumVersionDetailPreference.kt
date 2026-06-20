@@ -60,10 +60,10 @@ class CaesiumVersionDetailPreference :
 
     override fun tags(context: Context) = arrayOf(TAG_DEVICE_STATE_PREFERENCE)
 
-    override fun intent(context: Context): Intent? =
-        Intent(Intent.ACTION_MAIN)
-            .setClassName("com.android.egg", PaintActivity::class.java.name)
-            .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+//    override fun intent(context: Context): Intent? =
+//        Intent(Intent.ACTION_MAIN)
+//            .setClassName("com.android.egg.paint", PaintActivity::class.java.name)
+//            .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
 
     override val supportsWrite = false
 
@@ -80,37 +80,37 @@ class CaesiumVersionDetailPreference :
     }
 
     // return true swallows the click event, while return false will start the intent
-    override fun onPreferenceClick(preference: Preference): Boolean {
-        if (Utils.isMonkeyRunning()) return true
-
-        // remove oldest hit and check whether there are 3 clicks within 500ms
-        for (index in 1..<ACTIVITY_TRIGGER_COUNT) hits[index - 1] = hits[index]
-        hits[ACTIVITY_TRIGGER_COUNT - 1] = SystemClock.uptimeMillis()
-        if (hits[ACTIVITY_TRIGGER_COUNT - 1] - hits[0] > DELAY_TIMER_MILLIS) return true
-
-        val context = preference.context
-        val userManager = context.getSystemService(Context.USER_SERVICE) as? UserManager
-        if (userManager?.hasUserRestriction(UserManager.DISALLOW_FUN) != true) return false
-
-        // Sorry, no fun for you!
-        val myUserId = UserHandle.myUserId()
-        val enforcedAdmin =
-            RestrictedLockUtilsInternal.checkIfRestrictionEnforced(
-                context,
-                UserManager.DISALLOW_FUN,
-                myUserId,
-            ) ?: return true
-        val disallowedBySystem =
-            RestrictedLockUtilsInternal.hasBaseUserRestriction(
-                context,
-                UserManager.DISALLOW_FUN,
-                myUserId,
-            )
-        if (!disallowedBySystem) {
-            RestrictedLockUtils.sendShowAdminSupportDetailsIntent(context, enforcedAdmin)
-        }
-        return true
-    }
+//    override fun onPreferenceClick(preference: Preference): Boolean {
+//        if (Utils.isMonkeyRunning()) return true
+//
+//        // remove oldest hit and check whether there are 3 clicks within 500ms
+//        for (index in 1..<ACTIVITY_TRIGGER_COUNT) hits[index - 1] = hits[index]
+//        hits[ACTIVITY_TRIGGER_COUNT - 1] = SystemClock.uptimeMillis()
+//        if (hits[ACTIVITY_TRIGGER_COUNT - 1] - hits[0] > DELAY_TIMER_MILLIS) return true
+//
+//        val context = preference.context
+//        val userManager = context.getSystemService(Context.USER_SERVICE) as? UserManager
+//        if (userManager?.hasUserRestriction(UserManager.DISALLOW_FUN) != true) return false
+//
+//        // Sorry, no fun for you!
+//        val myUserId = UserHandle.myUserId()
+//        val enforcedAdmin =
+//            RestrictedLockUtilsInternal.checkIfRestrictionEnforced(
+//                context,
+//                UserManager.DISALLOW_FUN,
+//                myUserId,
+//            ) ?: return true
+//        val disallowedBySystem =
+//            RestrictedLockUtilsInternal.hasBaseUserRestriction(
+//                context,
+//                UserManager.DISALLOW_FUN,
+//                myUserId,
+//            )
+//        if (!disallowedBySystem) {
+//            RestrictedLockUtils.sendShowAdminSupportDetailsIntent(context, enforcedAdmin)
+//        }
+//        return true
+//    }
 
     override val sensitivityLevel
         get() = SensitivityLevel.NO_SENSITIVITY
