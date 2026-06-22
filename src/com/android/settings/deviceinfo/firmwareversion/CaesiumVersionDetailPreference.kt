@@ -71,7 +71,7 @@ class CaesiumVersionDetailPreference :
 
     override fun storage(context: Context): KeyValueStore = createSummaryStorage(context, key)
 
-    override fun getSummary(context: Context): CharSequence? = "4.0.0"
+    override fun getSummary(context: Context): CharSequence? = "4.0.1"
 
     override fun bind(preference: Preference, metadata: PreferenceMetadata) {
         super.bind(preference, metadata)
