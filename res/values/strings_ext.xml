@@ -199,33 +199,6 @@ There are HTTP, HTTPS, DNS, DNS-over-TLS and DNS-over-HTTPS connectivity checks.
         mode will be delayed until the port is disconnected. The same behavior applies to pogo pins.
     </string>
 
-    <string name="duress_pwd_pref_title">Duress password</string>
-    <string name="duress_pwd_description">"Duress password can be entered instead of the user password in any place that asks for it, such as the lock screen of any user and any user or work profile password prompt.
-
-Submitting the duress password will immediately make the storage contents permanently inaccessible, delete all eSIMs and then power off the device. CaesiumOS will remain installed.
-
-Duress PIN works the same way duress password does."</string>
-    <string name="duress_pwd_enter_pin">Enter duress PIN</string>
-    <string name="duress_pwd_confirm_pin">Confirm duress PIN</string>
-    <string name="duress_pwd_enter_password">Enter duress password</string>
-    <string name="duress_pwd_confirm_password">Confirm duress password</string>
-    <string name="duress_pwd_action_add">Add duress PIN and password</string>
-    <string name="duress_pwd_add_button">Add</string>
-    <string name="duress_pwd_toast_added">Added duress PIN and password</string>
-    <string name="duress_pwd_toast_updated">Updated duress PIN and password</string>
-    <string name="duress_pwd_update_button">Update</string>
-    <string name="duress_pwd_cancel_button">Cancel</string>
-    <string name="duress_pwd_proceed_button">Proceed</string>
-    <string name="duress_pwd_delete_button">Delete</string>
-    <string name="duress_pwd_action_update">Update duress PIN and password</string>
-    <string name="duress_pwd_action_delete">Delete duress PIN and password</string>
-    <string name="duress_pwd_action_delete_confirmation">Delete duress PIN and password?</string>
-    <string name="duress_pwd_save_warning_title">WARNING</string>
-    <string name="duress_pwd_save_warning_text">"Submitting the duress PIN/password instead of the user PIN/password <b>will immediately make the storage contents permanently inaccessible</b> and will delete all eSIMs."</string>
-    <string name="duress_pwd_save_error">Duress PIN and password were not saved.\n\nDetails:\n%1$s</string>
-    <string name="duress_pwd_delete_error">Duress PIN and password were not deleted.\n\nDetails:\n%1$s</string>
-    <string name="duress_pwd_error_dialog_dismiss">Dismiss</string>
-
     <string name="alt_touchscreen_mode_title">Alternative touchscreen mode</string>
     <string name="alt_touchscreen_mode_summary">This mode is less susceptible to ghost touches. Don’t enable it unless you are experiencing touchscreen issues.</string>
     <string name="alt_touchscreen_mode_confirm_message">Confirm that the touchscreen is working. Without confirmation, alternative touchscreen mode will be disabled after several seconds.</string>
@@ -277,7 +250,7 @@ This method can be particularly useful when GNSS is unavailable or unreliable, s
         This allows locking to work like end session to full secondary users
         where strong authentication is required to unlock the storage.
     </string>
-    
+
     <string name="geocoder_title">Geocoder</string>
     <string name="geocoder_footer">
 "Forward and reverse geocoding are processes used to convert between geographic coordinates and human-readable addresses, respectively. Forward geocoding returns the coordinates for a given address, while reverse geocoding returns the address or addresses near a given set of coordinates. Apps can choose to use the geocoder selected here, which performs these lookups using a network-based service."
@@ -335,7 +308,7 @@ May cause unreliable service. Use at your own risk.
     <string name="carrier_settings_override_wfc_availability_enabled_roaming_not_editable">Available but roaming not editable</string>
     <string name="carrier_settings_override_cross_sim">Cross SIM calling / backup calling availability</string>
     <string name="carrier_settings_override_cross_sim_description">Only for dual SIM setups. If enabled, then when the SIM is roaming or out of service and Wi‑Fi isn\’t available, calls can be made over another SIM’s data connection. Wi-Fi calling should be set to available to use this.</string>
-    
+
     <string name="exploit_protection_title">Exploit protection</string>
     <string name="exploit_protection_summary">Device and app security improvements</string>
 
