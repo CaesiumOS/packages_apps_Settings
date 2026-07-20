@@ -3613,6 +3613,7 @@
     <string name="firmware_version">Android version</string>
     <!-- About phone screen, status item label  [CHAR LIMIT=60] -->
     <string name="security_patch">Android security update</string>
+    <string name="firmware_version_title" translatable="false">Firmware information</string>
     <!-- About phone screen, status item label  [CHAR LIMIT=40] -->
     <string name="model_info">Model</string>
     <!-- Label for device's hardware revision value [CHAR LIMIT=40] -->

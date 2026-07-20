@@ -43,10 +43,10 @@ open class FirmwareVersionScreen : PreferenceScreenMixin, PreferenceSummaryProvi
         get() = KEY
 
     override val title: Int
-        get() = R.string.firmware_version
+        get() = R.string.firmware_version_title
 
     override fun getSummary(context: Context): CharSequence? =
-        Build.VERSION.RELEASE_OR_PREVIEW_DISPLAY
+        ""
 
     override val keywords: Int
         get() = R.string.keywords_android_version
@@ -69,8 +69,8 @@ open class FirmwareVersionScreen : PreferenceScreenMixin, PreferenceSummaryProvi
 
     override fun getPreferenceHierarchy(context: Context, coroutineScope: CoroutineScope) =
         preferenceHierarchy(context) {
-            +FirmwareVersionDetailPreference()
             +LineageVersionDetailPreference()
+            +FirmwareVersionDetailPreference()
             +SecurityPatchLevelPreference()
             +LineageVendorSecurityPatchLevelPreference()
             +MainlineModuleVersionPreference()
