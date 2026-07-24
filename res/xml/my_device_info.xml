@@ -27,11 +27,6 @@
         android:selectable="false"
         settings:isPreferenceVisible="false"/>
 
-    <com.android.settingslib.widget.LayoutPreference
-        android:key="cs_info_cards_header"
-        android:layout="@layout/info_cards"
-        android:selectable="false"/>
-
     <PreferenceCategory
         android:key="basic_info_category"
         android:selectable="false"
